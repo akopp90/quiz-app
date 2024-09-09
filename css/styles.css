@@ -194,4 +194,7 @@ body {
 }
 .answerbox {
   display: none;
+  background-color: #02940089;
+  border-radius: 10px;
+  padding: 5px;
 }
