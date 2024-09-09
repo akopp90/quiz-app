@@ -99,14 +99,19 @@ body {
   background-color: #7a7a7a;
   cursor: pointer;
 }
-.answer_btn {
+
+.answers {
+  list-style: none;
+  display: flex;
+}
+.answer {
   border: solid 1px #bfbfbf;
   border-radius: 10px;
   padding: 5px;
   margin: 15px;
   cursor: pointer;
 }
-.answer_btn:hover {
+.answer:hover {
   background-color: chartreuse;
 }
 
