@@ -14,6 +14,16 @@ body {
   font-family: system-ui;
   width: 100%;
   display: flex;
+  background-color: darkgray;
+}
+
+.footer {
+  border-top: 1px solid #9a9a9a;
+  height: 50px;
+  margin-top: 10px;
+}
+.content {
+  background-color: #e2e2e2;
 }
 
 .header {
@@ -22,6 +32,8 @@ body {
   top: 0;
   text-align: center;
   width: 100%;
+  border-bottom: 1px solid #9a9a9a;
+  box-shadow: #7a7a7a;
 }
 
 .content {
@@ -30,10 +42,13 @@ body {
 
 .card {
   margin: 20px;
-  border: 1px solid #252629;
+  border: 1px solid #bfbfbf;
   padding: 3%;
   border-radius: 2rem;
   position: relative;
+}
+.card::last {
+  margin-bottom: 50px;
 }
 
 .card__heading {
@@ -43,7 +58,7 @@ body {
 .card__bookmark {
   font-size: 2em;
   padding: 12px;
-  border: solid 1px;
+  border: solid 1px #bfbfbf;
   border-radius: 50%;
   position: absolute;
   right: -10px;
@@ -68,15 +83,21 @@ body {
 }
 
 .btn {
-  background-color: chocolate;
-  border: solid 1px black;
+  background-color: rgb(114, 116, 115);
+  border: solid 1px #bfbfbf;
+  color: #fff;
   border-radius: 10px;
   margin: 15px;
   padding: 10px;
+  box-shadow: #7a7a7a;
 }
 
+.btn:hover {
+  background-color: #7a7a7a;
+  cursor: pointer;
+}
 .answer_btn {
-  border: solid 1px black;
+  border: solid 1px #bfbfbf;
   border-radius: 10px;
   padding: 5px;
   margin: 15px;
@@ -114,7 +135,7 @@ body {
 }
 
 .tag {
-  border: solid 1px black;
+  border: solid 1px #bfbfbf;
   border-radius: 5px;
   padding: 5px;
   background-color: #ccc;
