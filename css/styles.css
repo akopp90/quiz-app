@@ -26,14 +26,34 @@ body {
 }
 
 .card {
-  display: flex;
-  width: 80%;
-  border: solid 1px black;
-  border-radius: 15px;
-  margin: 20px;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
+  margin: 20px 10%;
+  border: 1px solid #252629;
+  padding: 3% 10%;
+  scroll-margin-top: 100px;
+  border-radius: 2rem;
+  position: relative;
+}
+
+.card__heading {
+  margin: 0 0 10px 0;
+}
+
+/**
+ * Place the bookmark in the top, right corner of each card.
+ */
+.card__bookmark {
+  font-size: 2em;
+  padding: 6px 12px;
+  border: solid 1px;
+  border-radius: 50%;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  background-color: #e5e5e5;
+}
+.card__bookmark:hover {
+  background-color: #04bd00;
+  cursor: pointer;
 }
 
 .subheading {
@@ -45,16 +65,12 @@ body {
   padding: 10px;
 }
 
-.bookmark {
-  right: -15px;
-  top: -15px;
-}
-
 .btn {
   background-color: chocolate;
-  border: 0;
+  border: solid 1px black;
   border-radius: 10px;
   margin: 15px;
+  padding: 10px;
 }
 
 .answer_btn {
@@ -66,4 +82,24 @@ body {
 }
 .answer_btn:hover {
   background-color: chartreuse;
+}
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  align-items: center;
+  width: 100%;
+  background-color: darkgray;
+}
+
+.navitem {
+  text-decoration: none;
+  color: rgb(52, 52, 52);
+}
+.navitem:hover {
+  font-weight: 600;
+  color: rgb(12, 12, 12);
 }
