@@ -186,6 +186,7 @@ body {
   min-height: 100vh;
 }
 .socials {
+  padding: 0;
   list-style: none;
   display: flex;
   justify-content: center;
