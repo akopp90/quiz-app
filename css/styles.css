@@ -4,32 +4,34 @@
 
 html {
   height: 100%;
+  width: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
+  flex-direction: column;
+  font-family: system-ui;
+  width: 100%;
+  display: flex;
 }
 
 .header {
   background-color: darkgray;
   margin: 0;
   top: 0;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .content {
   width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 .card {
-  margin: 20px 10%;
+  margin: 20px;
   border: 1px solid #252629;
-  padding: 3% 10%;
-  scroll-margin-top: 100px;
+  padding: 3%;
   border-radius: 2rem;
   position: relative;
 }
@@ -38,22 +40,22 @@ body {
   margin: 0 0 10px 0;
 }
 
-/**
- * Place the bookmark in the top, right corner of each card.
- */
 .card__bookmark {
   font-size: 2em;
-  padding: 6px 12px;
+  padding: 12px;
   border: solid 1px;
   border-radius: 50%;
   position: absolute;
-  right: -15px;
-  top: -15px;
+  right: -10px;
+  top: -10px;
   background-color: #e5e5e5;
 }
 .card__bookmark:hover {
   background-color: #04bd00;
   cursor: pointer;
+}
+.active {
+  background-color: #04bd00;
 }
 
 .subheading {
@@ -83,6 +85,7 @@ body {
 .answer_btn:hover {
   background-color: chartreuse;
 }
+
 .nav {
   display: flex;
   justify-content: center;
