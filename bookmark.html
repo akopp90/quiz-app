@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quiz App</title>
+    <title>Bookmarks</title>
     <link rel="stylesheet" href="./css/styles.css" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
@@ -12,10 +12,10 @@
   </head>
   <body>
     <header class="header">
-      <h1>Bookmarks</h1>
+      <h1>Quiz App</h1>
     </header>
     <main class="content">
-      <section class="card" id="top">
+      <section class="card">
         <h2 class="card__heading">heading</h2>
         <button class="card__bookmark material-icons active">bookmark</button>
         <p class="card__text">
@@ -23,19 +23,19 @@
           ipsum maxime voluptate voluptatem?
         </p>
         <button class="btn center">Show answer</button>
-        <div class="">
-          <span class="answer_btn" name="a">Answer A</span>
-          <span class="answer_btn" name="b">Answer B</span>
-          <span class="answer_btn" name="c">Answer C</span>
-          <span class="answer_btn" name="D">Answer D</span>
-        </div>
+        <ul class="answers">
+          <li class="answer">A</li>
+          <li class="answer">B</li>
+          <li class="answer">C</li>
+          <li class="answer active">D</li>
+        </ul>
         <ul class="taglist">
           <li class="tag">#flex</li>
           <li class="tag">#flex</li>
           <li class="tag">#flex</li>
         </ul>
       </section>
-      <section class="card" id="top">
+      <section class="card">
         <h2 class="card__heading">heading</h2>
         <button class="card__bookmark material-icons active">bookmark</button>
         <p class="card__text">
@@ -43,12 +43,12 @@
           ipsum maxime voluptate voluptatem?
         </p>
         <button class="btn center">Show answer</button>
-        <div class="">
-          <span class="answer_btn" name="a">Answer A</span>
-          <span class="answer_btn" name="b">Answer B</span>
-          <span class="answer_btn" name="c">Answer C</span>
-          <span class="answer_btn" name="D">Answer D</span>
-        </div>
+        <ul class="answers">
+          <li class="answer">A</li>
+          <li class="answer">B</li>
+          <li class="answer">C</li>
+          <li class="answer active">D</li>
+        </ul>
         <ul class="taglist">
           <li class="tag">#flex</li>
           <li class="tag">#flex</li>
@@ -56,13 +56,31 @@
         </ul>
       </section>
     </main>
-    <nav class="nav">
-      <a class="navitem material-icons" href="index.html"
-        ><i class="">dashboard</i></a
-      >
-      <a class="navitem material-icons" href="#"><i class="">bookmarks</i></a>
-      <a class="navitem material-icons" href="#"><i class="">edit</i></a>
-      <a class="navitem material-icons" href="#"><i class="">portrait</i></a>
-    </nav>
+    <footer class="footer">
+      <nav class="nav">
+        <ul class="footer__nav">
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="index.html">
+              <i class="">dashboard</i>&nbsp;</a
+            >
+          </li>
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="bookmark.html">
+              <i class="">bookmarks</i>&nbsp;</a
+            >
+          </li>
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="#">
+              <i class="">edit</i>&nbsp;</a
+            >
+          </li>
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="#">
+              <i class="">portrait</i>&nbsp;</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
