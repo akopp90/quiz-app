@@ -1,4 +1,6 @@
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -175,4 +177,17 @@ body {
 
 .tag:hover {
   background-color: #7a7a7a;
+}
+
+.profile {
+  justify-content: center;
+  align-items: center;
+  height: 82vh;
+}
+.socials {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 15px;
 }
