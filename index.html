@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="quiz.js" defer></script>
+    <script src="./index.js" defer></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -158,10 +158,12 @@
         <span class="close" style="align-self: right; width: 100%"
           >&times;</span
         >
-        <h3 class="modal-content__heading">add Question</h3>
+        <h3 class="modal-content__heading" style="text-align: center">
+          Add Question
+        </h3>
         <form class="form" data-js="form">
           <label for="question"
-            >Question:
+            >Question:<br />
             <textarea
               id="question"
               name="question"
@@ -169,21 +171,25 @@
               maxlength="150"
               data-js="question"
             ></textarea>
-            <p><span data-js="char-count1"></span> characters left</p>
+            <p>
+              <small><span data-js="char-count1"></span> characters left</small>
+            </p>
           </label>
 
           <label for="answer"
-            >Answer:
+            >Answer:<br />
             <textarea
               name="answer"
               id="answer"
               maxlength="150"
               data-js="answer"
             ></textarea>
-            <p><span data-js="char-count2"></span> characters left</p>
+            <p>
+              <small><span data-js="char-count2"></span> characters left</small>
+            </p>
           </label>
           <label for="tags"
-            >Tags:
+            >Tags:<br />
             <input type="text" name="tag" id="tags" />
           </label>
           <button type="submit" data-js="create">Create</button>
