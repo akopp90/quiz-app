@@ -20,6 +20,17 @@ body {
   background-color: darkgray;
   font-family: "Roboto", sans-serif;
 }
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
 .footer {
   border-top: 1px solid #9a9a9a;
@@ -236,11 +247,17 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 90%; /* Could be more or less, depending on screen size */
+}
+.modal-content__heading {
+  width: 100%;
 }
 
 /* The Close Button */
