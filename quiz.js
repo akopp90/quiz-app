@@ -123,5 +123,6 @@ form.addEventListener("submit", (event) => {
           <li class="tag">${tag}</li>
         </ul>`;
     document.querySelector('[data-js="main"]').append(newQuestion);
+    modal.style.display = "none";
   }
 });
