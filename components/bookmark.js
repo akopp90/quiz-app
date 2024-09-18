@@ -1,12 +1,14 @@
 function getLikeFlag() {}
-let like_flag = [false, false, false];
+
+let like_flag = false;
 let dislike_flag = false;
 function bookmark(event, id) {
   let counter = parseFloat(document.getElementById("counter-" + id).innerHTML);
   const button = event.target.innerText;
+
   switch (button) {
     case "bookmark":
-      if (like_flag[id - 1] == false) {
+      if (!event.target.classList.contains("active")) {
         counter++;
         console.log(counter);
         document.getElementById("like-" + id).classList.add("active");
