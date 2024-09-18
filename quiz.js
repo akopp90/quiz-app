@@ -50,7 +50,78 @@ function showBookmarked() {
 bookmarkButton.addEventListener("click", function () {
   showBookmarked();
 });
+const showAllButton = document.querySelector('[data-js="home-btn"]');
+function showAll() {
+  const isBookmark = document.getElementsByClassName("card__bookmark");
+  let bookmarkLenght = isBookmark.length;
+  for (let i = 0; i < bookmarkLenght; i++) {
+    const card = document.getElementsByClassName("card " + (i + 1));
+    console.log("isBookmark");
+    isBookmark[i].closest(".card").classList.remove("card__bookmark--hide");
+  }
+}
+showAllButton.addEventListener("click", function () {
+  showAll();
+});
+function showProfile() {
+  document.body.innerHTML = `<main class="content">
+      <section class="card profile">
+        <img
+          src="https://picsum.photos/200/200"
+          alt="John"
+          width="200px"
+          style="border-radius: 50%"
+          class="profile_pic"
+        />
+        <h2>Andreas Kopp</h2>
+        <p class="title">CEO & Founder, Example</p>
+        <p>thePower Business School</p>
+        <ul class="socials">
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-github"></i></a>
+          </li>
+        </ul>
 
+        <p><button>Contact</button></p>
+      </section>
+    </main>
+    <footer class="footer">
+      <nav class="nav">
+        <ul class="footer__nav">
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="index.html">
+              <i class="">dashboard</i>&nbsp;</a
+            >
+          </li>
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="bookmark.html">
+              <i class="">bookmarks</i>&nbsp;</a
+            >
+          </li>
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="#">
+              <i class="">edit</i>&nbsp;</a
+            >
+          </li>
+          <li class="footer__nav__item">
+            <a class="navitem material-icons" href="profile.html">
+              <i class="">portrait</i>&nbsp;</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </footer>`;
+}
+const profileBtn = document.querySelector('[data-js="profile-btn"]');
+profileBtn.addEventListener("click", function () {
+  showProfile();
+});
 // Get the modal
 var modal = document.getElementById("myModal");
 
