@@ -78,6 +78,32 @@ window.onclick = function (event) {
 
 const createButton = document.querySelector('[data-js="create"]');
 const form = document.querySelector('[data-js="form"]');
+const answer = document.querySelector('[data-js="answer"]');
+const question = document.querySelector('[data-js="question"]');
+const charCount = document.querySelector('[data-js="char-count1"]');
+const charCount2 = document.querySelector('[data-js="char-count2"]');
+const maxLength = question.getAttribute("maxlength");
+const maxLength2 = answer.getAttribute("maxlength");
+console.log(charCount);
+const updateAmountLeft = (value) => {
+  charCount2.innerText = value;
+};
+
+updateAmountLeft(maxLength2);
+
+answer.addEventListener("input", () => {
+  updateAmountLeft(maxLength2 - answer.value.length);
+});
+const updateAmountLeft2 = (value) => {
+  charCount.innerText = value;
+};
+
+updateAmountLeft2(maxLength);
+
+question.addEventListener("input", () => {
+  updateAmountLeft2(maxLength - question.value.length);
+});
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formElement = event.target;

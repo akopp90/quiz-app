@@ -156,12 +156,21 @@
               id="question"
               name="question"
               placeholder="Question"
+              maxlength="150"
+              data-js="question"
             ></textarea>
+            <p><span data-js="char-count1"></span> characters left</p>
           </label>
 
           <label for="answer"
             >Answer:
-            <textarea name="answer" id="answer"></textarea>
+            <textarea
+              name="answer"
+              id="answer"
+              maxlength="150"
+              data-js="answer"
+            ></textarea>
+            <p><span data-js="char-count2"></span> characters left</p>
           </label>
           <label for="tags"
             >Tags:
