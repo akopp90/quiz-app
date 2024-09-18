@@ -39,7 +39,7 @@ textarea {
 }
 
 .header {
-  background-color: darkgray;
+  background-color: rgb(184, 142, 1);
   margin: 0;
   top: 0;
   text-align: center;
@@ -57,15 +57,14 @@ textarea {
 }
 
 .card {
-  margin: 20px;
+  margin: 5px;
   border: 1px solid #bfbfbf;
   padding: 3%;
   align-self: center;
-  border-radius: 2rem;
+  border-radius: 0;
   position: relative;
   display: flex;
   flex-direction: column;
-
   width: 80%;
 }
 .card::last {
