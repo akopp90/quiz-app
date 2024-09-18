@@ -87,12 +87,11 @@ form.addEventListener("submit", (event) => {
   const tag = data.tag;
   const qId = 1;
   createQuestion(question, answer, tag, qId);
-});
-const newQuestion = form.elem;
-function createQuestion(question, answer, tag, qId) {
-  const newQuestion = document.createElement("section");
-  newQuestion.classList.add("card");
-  newQuestion.innerHTML = `<h2 class="card__heading">heading</h2>
+  const newQuestion = form.elem;
+  function createQuestion(question, answer, tag, qId) {
+    const newQuestion = document.createElement("section");
+    newQuestion.classList.add("card");
+    newQuestion.innerHTML = `<h2 class="card__heading">heading</h2>
         <section class="counter__box">
           <button
             class="card__bookmark material-icons"
@@ -121,5 +120,6 @@ function createQuestion(question, answer, tag, qId) {
         <ul class="taglist">
           <li class="tag">${tag}</li>
         </ul>`;
-  document.querySelector('[data-js="main"]').append(newQuestion);
-}
+    document.querySelector('[data-js="main"]').append(newQuestion);
+  }
+});
