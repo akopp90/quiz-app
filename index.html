@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quiz App</title>
     <link rel="stylesheet" href="./css/styles.css" />
-    <script src="./index.js" defer></script>
+    <script type="module" src="./index.js" defer></script>
+    <script src="./components/bookmark.js"></script>
+    <script src="./components/answer.js"></script>
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -16,7 +18,7 @@
       <h1>Quiz App</h1>
     </header>
     <main class="content" data-js="main">
-      <section class="card 1">
+      <section class="card hidden">
         <h2 class="card__heading">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
           ipsum maxime voluptate voluptatem?
@@ -24,87 +26,20 @@
         <section class="counter__box">
           <button
             class="card__bookmark material-icons"
-            id="like-1"
-            onclick="bookmark(event, 1)"
+            id="like-0"
+            onclick="bookmark(event, 0)"
+            data-js="bookmark-button-0"
           >
             bookmark
           </button>
 
-          <span id="counter-1" class="counter">0</span>
+          <span id="counter-0" class="counter">0</span>
         </section>
 
-        <button class="btn center" onclick="" id="1" data-js="answer-button">
+        <button class="btn center" onclick="" id="0" data-js="answer-button">
           Show answer
         </button>
-        <article class="answerbox" name="answer1" id="a1">
-          <p>Das ist die Antwort!</p>
-        </article>
-        <ul class="taglist">
-          <li class="tag">#flex</li>
-          <li class="tag">#flex</li>
-          <li class="tag">#flex</li>
-        </ul>
-      </section>
-      <section class="card 2">
-        <h2 class="card__heading">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
-          ipsum maxime voluptate voluptatem?
-        </h2>
-        <section class="counter__box">
-          <button
-            class="card__bookmark material-icons"
-            id="like-2"
-            onclick="bookmark(event, 2)"
-          >
-            bookmark
-          </button>
-
-          <span id="counter-2" class="counter">0</span>
-        </section>
-
-        <button
-          class="btn center"
-          onclick="showAnswer(2)"
-          id="2"
-          data-js="answer-button"
-        >
-          Show answer
-        </button>
-        <article class="answerbox" name="answer1" id="a2">
-          <p>Das ist die Antwort!</p>
-        </article>
-        <ul class="taglist">
-          <li class="tag">#flex</li>
-          <li class="tag">#flex</li>
-          <li class="tag">#flex</li>
-        </ul>
-      </section>
-      <section class="card 3">
-        <h2 class="card__heading">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
-          ipsum maxime voluptate voluptatem?
-        </h2>
-        <section class="counter__box">
-          <button
-            class="card__bookmark material-icons"
-            id="like-3"
-            onclick="bookmark(event, 3)"
-          >
-            bookmark
-          </button>
-
-          <span id="counter-3" class="counter">0</span>
-        </section>
-        <p class="card__text"></p>
-        <button
-          class="btn center"
-          onclick="showAnswer(3)"
-          id="3"
-          data-js="answer-button"
-        >
-          Show answer
-        </button>
-        <article class="answerbox" name="answer1" id="a3">
+        <article class="answerbox" name="answer0" id="a0">
           <p>Das ist die Antwort!</p>
         </article>
         <ul class="taglist">

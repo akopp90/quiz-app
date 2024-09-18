@@ -1,50 +1,49 @@
+import questions from "./components/questions.js";
+
 const answerButton = document.querySelector('[data-js="answer-button"]');
 const bookmarkButton = document.querySelector('[data-js="bookmark-button"]');
-
-//show Answer
 answerButton.addEventListener("click", function () {
   const answerId = answerButton.getAttribute("id");
+  console.log(answerId);
   showAnswer(answerId);
 });
-function showAnswer(answerId) {
-  const x = document.getElementById("a" + answerId);
-  x.classList.toggle("answerbox--active");
+function createCard(question, answer, tag, qId) {
+  const newCard = document.createElement("section");
+  newCard.classList.add("card");
+  newCard.classList.add(qId + 1);
+  newCard.innerHTML = `<h2 class="card__heading">${question}</h2>
+      <section class="counter__box">
+        <button
+          class="card__bookmark material-icons"
+          id="like-${qId + 1}"
+          onclick="bookmark(event, ${qId + 1})"
+        >
+          bookmark
+        </button>
 
-  // Find the button element that triggered the event
-  const button = document.getElementById(answerId);
-  console.log(button);
-  if (x.classList.contains("answerbox--active")) {
-    console.log(button.textContent);
-    button.textContent = "Hide answer";
-  } else {
-    console.log(button.textContent);
-    button.textContent = "Show answer";
-  }
+        <span id="counter-${qId + 1}" class="counter">0</span>
+      </section>
+      
+      <button
+        class="btn center"
+        onclick="showAnswer(${qId + 1})"
+        id="${qId + 1}"
+        data-js="answer-button"
+      >
+        Show answer
+      </button>
+      <article class="answerbox" name="answer${qId + 1}" id="a${qId + 1}">
+        <p>${answer}</p>
+      </article>
+      <ul class="taglist">
+        <li class="tag">${tag}</li>
+      </ul>`;
+  document.querySelector('[data-js="main"]').append(newCard);
 }
 
-function getLikeFlag() {}
-let like_flag = [false, false, false];
-let dislike_flag = false;
-function bookmark(event, id) {
-  let counter = parseFloat(document.getElementById("counter-" + id).innerHTML);
-  var button = event.target.innerText;
-  switch (button) {
-    case "bookmark":
-      if (like_flag[id - 1] == false) {
-        counter++;
-        console.log(counter);
-        document.getElementById("like-" + id).classList.add("active");
-        document.getElementById("counter-" + id).innerHTML = counter;
-        like_flag[id - 1] = true;
-      } else {
-        counter--;
-        document.getElementById("like-" + id).classList.remove("active");
-        document.getElementById("counter-" + id).innerHTML = counter;
-        like_flag[id - 1] = false;
-      }
-      break;
-  }
-  console.log("the button " + button + " was pressed");
+const qId = questions.length;
+for (let i = 0; i < questions.length; i++) {
+  createCard(questions[i].question, questions[i].answer, questions[i].tags, i);
 }
 
 // Bookmarks
@@ -223,6 +222,7 @@ form.addEventListener("submit", (event) => {
 
           <span id="counter-${qId}" class="counter">0</span>
         </section>
+        
         <button
           class="btn center"
           onclick="showAnswer(${qId})"

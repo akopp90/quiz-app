@@ -266,6 +266,9 @@ textarea {
 .modal-content__heading {
   width: 100%;
 }
+.hidden {
+  display: none;
+}
 
 /* The Close Button */
 .close {
