@@ -147,20 +147,25 @@
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
-        <span class="close">&times;</span>
+        <span class="close" style="align-self: right">&times;</span>
         <h3 class="modal-content__heading">add Question</h3>
         <form class="form" data-js="form">
           <label for="question"
             >Question:
-            <textarea id="question" placeholder="Question"></textarea>
+            <textarea
+              id="question"
+              name="question"
+              placeholder="Question"
+            ></textarea>
           </label>
 
           <label for="answer"
-            >Answer: <textarea name="answer" id="answer"></textarea>
+            >Answer:
+            <textarea name="answer" id="answer"></textarea>
           </label>
           <label for="tags"
             >Tags:
-            <input type="text" name="" id="tags" />
+            <input type="text" name="tag" id="tags" />
           </label>
           <button type="submit" data-js="create">Create</button>
         </form>

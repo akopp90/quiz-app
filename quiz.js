@@ -80,7 +80,9 @@ const createButton = document.querySelector('[data-js="create"]');
 const form = document.querySelector('[data-js="form"]');
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const formData = new FormData(event.target);
+  const formElement = event.target;
+  const formData = new FormData(formElement);
+
   const data = Object.fromEntries(formData);
   const question = data.question;
   const answer = data.answer;
