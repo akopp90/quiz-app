@@ -1,10 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 html {
   height: 100%;
@@ -80,6 +79,9 @@ body {
   background-color: #04bd00;
   cursor: pointer;
 }
+.card__bookmark--hide {
+  display: none;
+}
 .counter {
   position: absolute;
   z-index: 5;
@@ -128,6 +130,7 @@ body {
   margin: 15px;
   cursor: pointer;
 }
+
 .answer:hover {
   background-color: chartreuse;
 }
@@ -156,14 +159,14 @@ body {
   display: flex;
   height: 100%;
   margin: 0;
-  justify-content: center;
+  justify-content: space-evenly;
   padding: 0;
 }
 .footer__nav__item {
   justify-self: center;
   height: 100%;
+  width: 100%;
   text-align: center;
-  width: 50px;
   border-left: 1px solid #7d7d7d;
   border-right: 1px solid #979797;
   padding: 10px;
@@ -174,6 +177,7 @@ body {
 
 .taglist {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   gap: 5px;
 }
@@ -207,4 +211,7 @@ body {
   background-color: #02940089;
   border-radius: 10px;
   padding: 5px;
+}
+.answerbox--active {
+  display: block;
 }

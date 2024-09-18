@@ -33,8 +33,10 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
           ipsum maxime voluptate voluptatem?
         </p>
-        <button class="btn center" onclick="showAnswer(1)">Show answer</button>
-        <article class="answerbox" name="answer1" id="1">
+        <button class="btn center" onclick="" id="1" data-js="answer-button">
+          Show answer
+        </button>
+        <article class="answerbox" name="answer1" id="a1">
           <p>Das ist die Antwort!</p>
         </article>
         <ul class="taglist">
@@ -60,8 +62,15 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
           ipsum maxime voluptate voluptatem?
         </p>
-        <button class="btn center" onclick="showAnswer(2)">Show answer</button>
-        <article class="answerbox" name="answer1" id="2">
+        <button
+          class="btn center"
+          onclick="showAnswer(2)"
+          id="2"
+          data-js="answer-button"
+        >
+          Show answer
+        </button>
+        <article class="answerbox" name="answer1" id="a2">
           <p>Das ist die Antwort!</p>
         </article>
         <ul class="taglist">
@@ -87,8 +96,15 @@
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
           ipsum maxime voluptate voluptatem?
         </p>
-        <button class="btn center" onclick="showAnswer(3)">Show answer</button>
-        <article class="answerbox" name="answer1" id="3">
+        <button
+          class="btn center"
+          onclick="showAnswer(3)"
+          id="3"
+          data-js="answer-button"
+        >
+          Show answer
+        </button>
+        <article class="answerbox" name="answer1" id="a3">
           <p>Das ist die Antwort!</p>
         </article>
         <ul class="taglist">
@@ -107,9 +123,9 @@
             >
           </li>
           <li class="footer__nav__item">
-            <a class="navitem material-icons" href="bookmark.html">
-              <i class="">bookmarks</i>&nbsp;</a
-            >
+            <button class="navitem material-icons" data-js="bookmark-button">
+              <i class="">bookmarks</i>&nbsp;
+            </button>
           </li>
           <li class="footer__nav__item">
             <a class="navitem material-icons" href="#">
