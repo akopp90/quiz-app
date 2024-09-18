@@ -35,14 +35,15 @@ function bookmark(event, id) {
 
 function showBookmarked() {
   const isBookmark = document.getElementsByClassName("card__bookmark");
-  if (isBookmark.length > 0 && !isBookmark[0].classList.contains("active")) {
-    // Access the first element in the collection
-    const i = 0;
+  let bookmarkLenght = isBookmark.length;
+  console.log(bookmarkLenght);
+  for (let i = 0; i < bookmarkLenght; i++) {
+    const card = document.getElementsByClassName("card " + (i + 1));
+    console.log("isBookmark");
 
-    isBookmark[i].parentElement.classList.add("card__bookmark--hide");
-    console.log(isBookmark[i]);
-    for (i < isBookmark.length; i++; ) {
-      console.log(isBookmark[i]);
+    if (!isBookmark[i].classList.contains("active")) {
+      console.log(isBookmark[i].closest(".card"));
+      isBookmark[i].closest(".card").classList.add("card__bookmark--hide");
     }
   }
 }

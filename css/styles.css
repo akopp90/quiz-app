@@ -125,7 +125,7 @@ textarea {
 }
 
 .btn:hover {
-  background-color: #7a7a7a;
+  background-color: rgb(134, 103, 3);
   cursor: pointer;
 }
 
@@ -151,7 +151,7 @@ textarea {
   bottom: 0;
   height: 50px;
   width: 100%;
-  background-color: darkgray;
+  background-color: rgb(184, 142, 1);
   margin: 0;
   padding: 0;
 }
@@ -183,7 +183,7 @@ textarea {
   padding: 10px;
 }
 .footer__nav__item:hover {
-  background-color: #515151;
+  background-color: rgb(134, 103, 3);
 }
 
 .taglist {
@@ -197,11 +197,11 @@ textarea {
   border: solid 1px #bfbfbf;
   border-radius: 5px;
   padding: 5px;
-  background-color: #ccc;
+  background-color: rgb(184, 142, 1);
 }
 
 .tag:hover {
-  background-color: #7a7a7a;
+  background-color: rgb(134, 103, 3);
 }
 
 .profile {
