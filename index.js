@@ -211,7 +211,7 @@ form.addEventListener("submit", (event) => {
   function createQuestion(question, answer, tag, qId) {
     const newQuestion = document.createElement("section");
     newQuestion.classList.add("card");
-    newQuestion.innerHTML = `<h2 class="card__heading">heading</h2>
+    newQuestion.innerHTML = `<h2 class="card__heading">${question}</h2>
         <section class="counter__box">
           <button
             class="card__bookmark material-icons"
@@ -223,9 +223,6 @@ form.addEventListener("submit", (event) => {
 
           <span id="counter-${qId}" class="counter">0</span>
         </section>
-        <p class="card__text">
-        ${question}
-        </p>
         <button
           class="btn center"
           onclick="showAnswer(${qId})"
