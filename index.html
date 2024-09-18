@@ -15,7 +15,7 @@
     <header class="header">
       <h1>Quiz App</h1>
     </header>
-    <main class="content">
+    <main class="content" data-js="main">
       <section class="card">
         <h2 class="card__heading">heading</h2>
         <section class="counter__box">
@@ -123,14 +123,17 @@
             >
           </li>
           <li class="footer__nav__item">
-            <button class="navitem material-icons" data-js="bookmark-button">
+            <button
+              class="navitem material-icons menu__btn"
+              data-js="bookmark-button"
+            >
               <i class="">bookmarks</i>&nbsp;
             </button>
           </li>
           <li class="footer__nav__item">
-            <a class="navitem material-icons" href="#">
-              <i class="">edit</i>&nbsp;</a
-            >
+            <button class="navitem material-icons menu__btn" id="myBtn">
+              <i class="">edit</i>&nbsp;
+            </button>
           </li>
           <li class="footer__nav__item">
             <a class="navitem material-icons" href="profile.html">
@@ -140,5 +143,28 @@
         </ul>
       </nav>
     </footer>
+
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>add Question</h3>
+        <form class="form" data-js="form">
+          <label for="question"
+            >Question: <input type="text" id="question" placeholder="Question"
+          /></label>
+
+          <label for="tags"
+            >Tags:
+            <input type="text" name="" id="tags" />
+          </label>
+
+          <label for="answer"
+            >Answer: <textarea name="answer" id="answer"></textarea>
+          </label>
+          <button type="submit" data-js="create">Create</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
