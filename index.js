@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
       question: formData.get("question"),
       answer: formData.get("answer"),
       tags: formData
-        .get("tag")
+        .get("tags")
         .split(",")
         .map((tag) => tag.trim()),
     };
