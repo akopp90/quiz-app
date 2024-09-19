@@ -71,6 +71,7 @@ p {
 .content {
   flex: 1;
   padding: 2rem 0;
+  margin-bottom: 80px;
 }
 
 /* Header */
