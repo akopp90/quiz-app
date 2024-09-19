@@ -11,42 +11,61 @@
       rel="stylesheet"
     />
   </head>
+
   <body>
+    <!-- Header Section -->
+
     <header class="header">
-      <h1>Quiz App</h1>
+      <div class="container">
+        <h1>Quiz App</h1>
+      </div>
     </header>
-    <main class="content" data-js="main">
-      <section class="card hidden">
-        <h2 class="card__heading">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus
-          ipsum maxime voluptate voluptatem?
-        </h2>
-        <section class="counter__box">
-          <button
-            class="card__bookmark material-icons"
-            id="like-0"
-            onclick="bookmark(event, 0)"
-            data-js="bookmark-button-0"
-          >
-            bookmark
+
+    <!-- Main Container -->
+    <div class="container">
+      <main class="content" data-js="main">
+        <!-- Card Section -->
+        <section class="card hidden">
+          <h2 class="card__heading">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Repellendus ipsum maxime voluptate voluptatem?
+          </h2>
+
+          <!-- Bookmark and Counter -->
+          <section class="counter__box">
+            <button
+              class="card__bookmark material-icons"
+              id="like-0"
+              onclick="bookmark(event, 0)"
+              aria-label="Bookmark this question"
+              data-js="bookmark-button-0"
+            >
+              bookmark
+            </button>
+            <span id="counter-0" class="counter">0</span>
+          </section>
+
+          <!-- Show Answer Button -->
+          <button class="btn center" id="0" data-js="answer-button">
+            Show answer
           </button>
 
-          <span id="counter-0" class="counter">0</span>
-        </section>
+          <!-- Answer Section -->
+          <article class="answerbox" id="a0">
+            <p>This is the answer!</p>
+          </article>
 
-        <button class="btn center" onclick="" id="0" data-js="answer-button">
-          Show answer
-        </button>
-        <article class="answerbox" name="answer0" id="a0">
-          <p>Das ist die Antwort!</p>
-        </article>
-        <ul class="taglist">
-          <li class="tag">#flex</li>
-          <li class="tag">#flex</li>
-          <li class="tag">#flex</li>
-        </ul>
-      </section>
-    </main>
+          <!-- Tag List -->
+          <ul class="taglist">
+            <li class="tag">#flex</li>
+            <li class="tag">#css</li>
+            <li class="tag">#javascript</li>
+          </ul>
+        </section>
+      </main>
+    </div>
+
+    <!-- Footer Navigation -->
     <footer class="footer">
       <nav class="nav">
         <ul class="footer__nav">
@@ -54,84 +73,93 @@
             <button
               class="navitem material-icons menu__btn"
               id="homeBtn"
+              aria-label="Go to dashboard"
               data-js="home-btn"
             >
-              <i class="">dashboard</i>&nbsp;
+              <i class="">dashboard</i>
             </button>
           </li>
           <li class="footer__nav__item">
             <button
               class="navitem material-icons menu__btn"
+              aria-label="View bookmarks"
               data-js="bookmark-button"
             >
-              <i class="">bookmarks</i>&nbsp;
+              <i class="">bookmarks</i>
             </button>
           </li>
           <li class="footer__nav__item">
-            <button class="navitem material-icons menu__btn" id="myBtn">
-              <i class="">edit</i>&nbsp;
+            <button
+              class="navitem material-icons menu__btn"
+              id="myBtn"
+              aria-label="Edit a question"
+            >
+              <i class="">edit</i>
             </button>
           </li>
           <li class="footer__nav__item">
             <button
               class="navitem material-icons menu__btn"
               id="profileBtn"
+              aria-label="View profile"
               data-js="profile-btn"
             >
-              <i class="">portrait</i>&nbsp;
+              <i class="">portrait</i>
             </button>
           </li>
         </ul>
       </nav>
     </footer>
 
+    <!-- Modal Section -->
     <div id="myModal" class="modal">
-      <!-- Modal content -->
       <div class="modal-content">
-        <span class="close" style="align-self: right; width: 100%"
-          >&times;</span
-        >
-        <h3 class="modal-content__heading" style="text-align: center">
-          Add Question
-        </h3>
-        <form class="form" data-js="form">
-          <label for="question"
-            >Question:<br />
-            <textarea
-              id="question"
-              name="question"
-              placeholder="type the question here ...."
-              maxlength="150"
-              data-js="question"
-            ></textarea>
-            <p>
-              <small><span data-js="char-count1"></span> characters left</small>
-            </p>
-          </label>
+        <span class="close" aria-label="Close modal">&times;</span>
 
-          <label for="answer"
-            >Answer:<br />
-            <textarea
-              name="answer"
-              id="answer"
-              maxlength="150"
-              data-js="answer"
-              placeholder="type the answer here ...."
-            ></textarea>
-            <p>
-              <small><span data-js="char-count2"></span> characters left</small>
-            </p>
-          </label>
-          <label for="tags"
-            >Tags:<br />
-            <input
-              type="text"
-              name="tag"
-              id="tags"
-              placeholder="css, html, js"
-            />
-          </label>
-          <button type="submit" data-js="create">Create</button>
+        <h3 class="modal-content__heading">Add Question</h3>
+
+        <!-- Form for Creating Question -->
+        <form class="form" data-js="form">
+          <!-- Question Field -->
+          <label for="question">Question:</label>
+          <textarea
+            id="question"
+            name="question"
+            placeholder="Type the question here..."
+            maxlength="150"
+            data-js="question"
+            required
+          ></textarea>
+          <p>
+            <small><span data-js="char-count1"></span> characters left</small>
+          </p>
+
+          <!-- Answer Field -->
+          <label for="answer">Answer:</label>
+          <textarea
+            id="answer"
+            name="answer"
+            placeholder="Type the answer here..."
+            maxlength="150"
+            data-js="answer"
+            required
+          ></textarea>
+          <p>
+            <small><span data-js="char-count2"></span> characters left</small>
+          </p>
+
+          <!-- Tags Field -->
+          <label for="tags">Tags:</label>
+          <input
+            type="text"
+            id="tags"
+            name="tags"
+            placeholder="css, html, js"
+            required
+          />
+
+          <!-- Submit Button -->
+          <button type="submit" data-js="create" class="btn">Create</button>
         </form>
       </div>
     </div>
