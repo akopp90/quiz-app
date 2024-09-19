@@ -187,7 +187,7 @@ small {
 input[type="text"],
 select,
 textarea {
-  width: 20vw;
+  width: 20rem;
   padding: 12px 20px;
   margin: 0;
   display: inline-block;
@@ -308,5 +308,13 @@ textarea {
 @media (min-width: 768px) {
   .card {
     max-width: 600px;
+  }
+}
+@media (max-width: 690px) {
+  input[type="text"],
+  select,
+  textarea {
+    width: 70vw;
+    padding: 5px 5px;
   }
 }
