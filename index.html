@@ -100,7 +100,7 @@
             <textarea
               id="question"
               name="question"
-              placeholder="Question"
+              placeholder="type the question here ...."
               maxlength="150"
               data-js="question"
             ></textarea>
@@ -116,6 +116,7 @@
               id="answer"
               maxlength="150"
               data-js="answer"
+              placeholder="type the answer here ...."
             ></textarea>
             <p>
               <small><span data-js="char-count2"></span> characters left</small>
@@ -123,7 +124,12 @@
           </label>
           <label for="tags"
             >Tags:<br />
-            <input type="text" name="tag" id="tags" />
+            <input
+              type="text"
+              name="tag"
+              id="tags"
+              placeholder="css, html, js"
+            />
           </label>
           <button type="submit" data-js="create">Create</button>
         </form>
